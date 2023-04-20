@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .gallery {
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
+
+        .slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .controls {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .controls button {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: none;
+            background: #fff;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .controls button.active {
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="gallery">
+        <div class="slider">
+            <img src="img/about-2.jpg">
+            <img src="img/about.jpg">
+            <img src="img/chefs-2.jpg">
+        </div>
+        <div class="controls">
+            <button class="prev"></button>
+            <button class="next"></button>
+        </div>
+    </div>
+
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        const controls = document.querySelectorAll('.controls button');
+
+        let currentSlide = 0;
+
+        function showSlide(slideIndex) {
+            slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+
+        function setActiveControl(controlIndex) {
+            controls.forEach((control, index) => {
+                if (index === controlIndex) {
+                    control.classList.add('active');
+                } else {
+                    control.classList.remove('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide >= slider.children.length) {
+                currentSlide = 0;
+            }
+            showSlide(currentSlide);
+            setActiveControl(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide--;
+            if (currentSlide < 0) {
+                currentSlide = slider.children.length - 1;
+            }
+            showSlide(currentSlide);
+            setActiveControl(currentSlide);
+        }
+
+        prevButton.addEventListener('click', prevSlide);
+        nextButton.addEventListener('click', nextSlide);
+
+        controls.forEach((control, index) => {
+            control.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+                setActiveControl(currentSlide);
+            });
+        });
+
+        setActiveControl(currentSlide);
+
+    </script>
+
+</body>
+
+</html>
