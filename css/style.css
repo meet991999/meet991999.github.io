@@ -1682,6 +1682,15 @@ p {
     .card_wrapper {
         max-width: 29.3%;
     }
+
+    .mobile-menu.active {
+        width: 100% !important;
+        opacity: 94%;
+    }
+
+    .mobile-menu ul li a {
+        padding: 10px 10px 10px 31px;
+    }
 }
 
 @media screen and (max-width: 410px) {
