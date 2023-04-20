@@ -22,6 +22,9 @@ header {
     align-items: center;
     display: flex;
     justify-content: center;
+    position: fixed;
+    z-index: 19999999;
+    width: 100%;
 }
 
 .wrapper {
@@ -290,7 +293,7 @@ nav ul li.dropdown ul li:hover {
     min-height: 50%;
     position: relative;
     background-size: cover;
-    padding: 60px 0 60px 0;
+    padding: 160px 0 60px 0;
     background-color: #eee;
 }
 

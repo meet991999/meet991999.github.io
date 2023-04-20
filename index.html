@@ -31,12 +31,12 @@
                 <h1 class="logo">Yummy<span>.</span></h1>
                 <nav>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">Chefs</a></li>
-                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#About">About</a></li>
+                        <li><a href="#Menu">Menu</a></li>
+                        <li><a href="#Events">Events</a></li>
+                        <li><a href="#Chefs">Chefs</a></li>
+                        <li><a href="#Gallery">Gallery</a></li>
                         <li class="dropdown">
                             <a href="#">Dropdown <small> <i class="fas fa-chevron-down dropdown_img"></i></small></a>
                             <ul>
@@ -82,7 +82,7 @@
             </div>
 
         </header>
-        <section class="hero">
+        <section class="hero" id="Home">
             <div class="container hero_container flex">
                 <div class="img"><img src="img/hero-img.png" alt="" class="hero_img"></div>
                 <div class="text">
@@ -100,7 +100,7 @@
             </div>
         </section>
 
-        <section class="about">
+        <section class="about" id="About">
             <div class="container">
                 <div class="text_about_us">
                     <h2>ABOUT US</h2>
@@ -230,7 +230,7 @@
 
 
 
-        <section class="menu">
+        <section class="menu" id="Menu">
             <div class="container">
                 <div class="menu_header">
                     <h2>OUR MENU</h2>
@@ -574,7 +574,7 @@
 
 
 
-        <section class="events">
+        <section class="events" id="Events">
             <div class="event_container">
                 <div class="menu_header">
                     <h2>Events</h2>
@@ -694,7 +694,7 @@
 
 
 
-        <section class="chefs">
+        <section class="chefs" id="Chefs">
             <div class="container">
                 <div class="menu_header">
                     <h2>CHEFS</h2>
@@ -793,7 +793,7 @@
         </section>
 
 
-        <section class="gallery">
+        <section class="gallery" id="Gallery">
             <div class="container">
                 <div class="menu_header">
                     <h2>GALLERY</h2>
@@ -1102,6 +1102,18 @@
             dots: true
         });
 
+
+
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
     </script>
 
