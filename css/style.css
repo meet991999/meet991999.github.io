@@ -842,6 +842,7 @@ p {
 
 .slide_show_main_content {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: center !important;
 }
 
@@ -1583,6 +1584,11 @@ p {
     .icon1::before {
         margin-right: 0px;
     }
+
+    .slide_show_main_content {
+        display: block;
+    }
+
 }
 
 
@@ -1703,4 +1709,15 @@ p {
         max-width: 89% !important;
     }
 
+}
+
+
+@media screen and (max-width: 360px) {
+    .card_deck {
+        width: 241%;
+    }
+
+    .call_number {
+        left: 3%;
+    }
 }
