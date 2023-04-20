@@ -1517,9 +1517,6 @@ p {
         align-items: normal;
     }
 
-    .stats_wrapper {
-        width: 50%;
-    }
 
     .info_item p {
         font-size: 12px;
@@ -1636,6 +1633,10 @@ p {
     .hero_img {
         width: 80% !important;
     }
+
+    .card_wrapper {
+        max-width: 32.3%;
+    }
 }
 
 @media screen and (max-width: 536px) {
@@ -1671,6 +1672,10 @@ p {
     .form_item_1 {
         width: 81% !important;
     }
+
+    .card_wrapper {
+        max-width: 29.3%;
+    }
 }
 
 @media screen and (max-width: 410px) {
@@ -1680,6 +1685,22 @@ p {
 
     .form_item_1 {
         width: 76% !important;
+    }
+
+    .container {
+        max-width: 80%;
+    }
+
+    .stats_wrapper {
+        max-width: 100%;
+    }
+
+    .form_row {
+        max-width: 83%;
+    }
+
+    .width_at_low {
+        max-width: 89% !important;
     }
 
 }
