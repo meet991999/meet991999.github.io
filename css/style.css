@@ -52,7 +52,7 @@ header {
 } */
 
 .container {
-    max-width: 67.3%;
+    max-width: 1360px;
     width: 100%;
     margin: auto;
 }
@@ -61,7 +61,7 @@ header {
 .flex {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
+
     align-items: center;
     margin: 0 auto;
 }
@@ -982,6 +982,7 @@ p {
 
 .chefs_cards {
     display: flex;
+    justify-content: center;
 }
 
 .chef_card {
@@ -1461,9 +1462,13 @@ p {
 
 @media screen and (max-width: 1360px) {
 
-    .container_root {
-        max-width: 1200px;
+    .container {
+        max-width: 80%;
     }
+
+    /* .container_root {
+        max-width: 1200px;
+    } */
 
     nav ul {
         display: none;
@@ -1496,10 +1501,17 @@ p {
 
 @media screen and (max-width: 1345px) {}
 
+.container {
+    max-width: 80%;
+}
+
 @media screen and (max-width: 1204px) {
-    .container_root {
-        max-width: 1025px;
+
+
+    .container {
+        max-width: 80%;
     }
+
 
     .other_card {
         flex-direction: column;
@@ -1529,6 +1541,10 @@ p {
 
 
 @media screen and (max-width: 1024px) {
+
+    .container {
+        max-width: 80%;
+    }
 
     .hero_container {
         display: block;
@@ -1580,6 +1596,10 @@ p {
 }
 
 @media screen and (max-width: 920px) {
+    .container {
+        max-width: 80%;
+    }
+
     .icon1 {
         margin-right: 0px;
     }
@@ -1596,7 +1616,9 @@ p {
 
 
 @media screen and (max-width: 768px) {
-
+    .container {
+        max-width: 80%;
+    }
 
     .main_footer {
         display: block;
@@ -1649,6 +1671,10 @@ p {
 }
 
 @media screen and (max-width: 536px) {
+    .container {
+        max-width: 80%;
+    }
+
     .book_now {
         display: none;
     }
@@ -1697,6 +1723,11 @@ p {
 }
 
 @media screen and (max-width: 410px) {
+
+    .container {
+        max-width: 80%;
+    }
+
     .call_number {
         left: 6%;
     }
